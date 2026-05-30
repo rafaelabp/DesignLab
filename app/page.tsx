@@ -9,19 +9,38 @@ export default function Home() {
   return (
     <>
       <Section className="hero">
-        <p className="eyebrow">Portfolio tecnico de Product Design</p>
-        <h1>DesignLab de Rafaela Pinto organiza problemas de interface em decisoes mais claras.</h1>
-        <p className="heroText">
-          Estudos de caso sobre produto, canvas, sintaxe visual e colaboracao entre design,
-          engenharia e estrategia.
-        </p>
-        <div className="heroActions" aria-label="Acoes principais">
-          <Link className="button buttonPrimary" href="/cases">
-            Ver cases
-          </Link>
-          <a className="button buttonSecondary" href="mailto:contato@designlab.dev">
-            Entrar em contato
-          </a>
+        <div className="heroPanel">
+          <div className="heroContent">
+            <p className="eyebrow">Portfolio tecnico de Product Design</p>
+            <h1>DesignLab de Rafaela Pinto organiza problemas de interface em decisoes mais claras.</h1>
+            <p className="heroText">
+              Estudos de caso sobre produto, canvas, sintaxe visual e colaboracao entre design,
+              engenharia e estrategia.
+            </p>
+            <div className="heroActions" aria-label="Acoes principais">
+              <Link className="button buttonPrimary" href="/cases">
+                Ver cases
+              </Link>
+              <a className="button buttonSecondary" href="mailto:contato@designlab.dev">
+                Entrar em contato
+              </a>
+            </div>
+          </div>
+
+          <aside className="heroAside" aria-label="Resumo profissional">
+            <div>
+              <span>Atuacao</span>
+              <strong>Product Design</strong>
+            </div>
+            <div>
+              <span>Foco</span>
+              <strong>Interfaces tecnicas</strong>
+            </div>
+            <div>
+              <span>Primeiro case</span>
+              <strong>Canvas e sintaxe visual</strong>
+            </div>
+          </aside>
         </div>
       </Section>
 

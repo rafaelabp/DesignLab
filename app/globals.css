@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #12161a 0, var(--background) 320px);
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -98,21 +98,62 @@ p {
 .section {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 36px 0;
+  padding: 20px 0;
 }
 
 .section + .section {
-  border-top: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  margin-top: 14px;
 }
 
 .hero,
 .caseHero {
-  padding-top: 48px;
-  padding-bottom: 42px;
+  padding-top: 28px;
+  padding-bottom: 20px;
+}
+
+.heroPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.heroContent {
+  align-self: center;
+}
+
+.heroAside {
+  display: grid;
+  align-content: start;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.heroAside div {
+  display: grid;
+  gap: 3px;
+  background: var(--surface-raised);
+  padding: 16px;
+}
+
+.heroAside span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.heroAside strong {
+  color: var(--foreground);
+  font-size: 0.98rem;
 }
 
 .eyebrow {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;
@@ -127,15 +168,14 @@ h3 {
 }
 
 h1 {
-  max-width: 760px;
-  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  max-width: 720px;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   letter-spacing: 0;
 }
 
 h2 {
-  max-width: 720px;
-  margin-bottom: 18px;
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  max-width: 680px;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
   letter-spacing: 0;
 }
 
@@ -145,7 +185,7 @@ h3 {
 }
 
 .heroText {
-  max-width: 640px;
+  max-width: 600px;
   margin-top: 14px;
   color: var(--ink-soft);
   font-size: 1rem;
@@ -189,14 +229,52 @@ h3 {
   gap: 14px;
 }
 
+.sectionHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px 8px 0 0;
+  background: var(--surface-soft);
+  padding: 18px 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+}
+
+.sectionHeader .eyebrow {
+  margin-bottom: 6px;
+}
+
 .focusGrid article,
 .processGrid article,
 .caseCard {
   border: 1px solid var(--line);
+  border-top: 0;
   border-radius: 8px;
   background: var(--surface-raised);
   box-shadow: none;
   padding: 20px;
+}
+
+.sectionHeader + .focusGrid article,
+.sectionHeader + .processGrid article,
+.sectionHeader + .caseList .caseCard {
+  border-radius: 0 0 8px 8px;
+}
+
+.sectionHeader + .focusGrid,
+.sectionHeader + .processGrid,
+.sectionHeader + .caseList {
+  gap: 1px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  border-radius: 0 0 8px 8px;
+  background: var(--line);
 }
 
 .focusGrid p,
@@ -277,13 +355,21 @@ h3 {
 
   .section {
     width: min(100% - 32px, 1120px);
-    padding: 30px 0;
+    padding: 14px 0;
   }
 
   .hero,
   .caseHero {
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+  }
+
+  .heroPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader {
+    display: block;
   }
 
   .focusGrid,
