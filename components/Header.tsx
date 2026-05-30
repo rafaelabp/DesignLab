@@ -1,0 +1,15 @@
+import Link from "next/link";
+
+export function Header() {
+  return (
+    <header className="siteHeader">
+      <Link className="brand" href="/">
+        DesignLab
+      </Link>
+      <nav className="nav" aria-label="Navegacao principal">
+        <Link href="/">Home</Link>
+        <Link href="/cases">Cases</Link>
+      </nav>
+    </header>
+  );
+}
