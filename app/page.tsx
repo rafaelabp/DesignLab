@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Section className="hero">
         <p className="eyebrow">Portfolio tecnico de Product Design</p>
-        <h1>DesignLab transforma problemas de interface em sistemas de decisao mais claros.</h1>
+        <h1>DesignLab de Rafaela Pinto organiza problemas de interface em decisoes mais claras.</h1>
         <p className="heroText">
           Estudos de caso sobre produto, canvas, sintaxe visual e colaboracao entre design,
           engenharia e estrategia.

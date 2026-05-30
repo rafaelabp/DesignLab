@@ -3,7 +3,7 @@ import { Section } from "@/components/Section";
 import { cases } from "@/content/cases";
 
 export const metadata = {
-  title: "Cases | DesignLab"
+  title: "Cases | DesignLab de Rafaela Pinto"
 };
 
 export default function CasesPage() {

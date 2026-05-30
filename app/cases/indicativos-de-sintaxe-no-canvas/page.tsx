@@ -6,7 +6,7 @@ import { cases } from "@/content/cases";
 const caseItem = cases.find((item) => item.slug === "indicativos-de-sintaxe-no-canvas");
 
 export const metadata = {
-  title: "Indicativos de sintaxe no canvas | DesignLab"
+  title: "Indicativos de sintaxe no canvas | DesignLab de Rafaela Pinto"
 };
 
 export default function SyntaxIndicatorsCasePage() {
