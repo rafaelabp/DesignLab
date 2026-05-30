@@ -98,17 +98,23 @@ p {
 .section {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .section + .section {
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .hero,
 .caseHero {
   padding-top: 28px;
-  padding-bottom: 20px;
+}
+
+.section:not(.hero) {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 22px;
 }
 
 .heroPanel {
@@ -232,14 +238,9 @@ h3 {
 }
 
 .sectionHeader {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px 8px 0 0;
-  background: var(--surface-soft);
-  padding: 18px 20px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
 }
 
 .sectionHeader h2 {
@@ -254,29 +255,10 @@ h3 {
 .processGrid article,
 .caseCard {
   border: 1px solid var(--line);
-  border-top: 0;
   border-radius: 8px;
   background: var(--surface-raised);
   box-shadow: none;
   padding: 20px;
-}
-
-.sectionHeader + .focusGrid article,
-.sectionHeader + .processGrid article,
-.sectionHeader + .caseList .caseCard {
-  border-radius: 0 0 8px 8px;
-}
-
-.sectionHeader + .focusGrid,
-.sectionHeader + .processGrid,
-.sectionHeader + .caseList {
-  gap: 1px;
-  overflow: hidden;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-  border-radius: 0 0 8px 8px;
-  background: var(--line);
 }
 
 .focusGrid p,
@@ -357,21 +339,19 @@ h3 {
 
   .section {
     width: min(100% - 32px, 1120px);
-    padding: 14px 0;
   }
 
   .hero,
   .caseHero {
     padding-top: 22px;
-    padding-bottom: 14px;
   }
 
   .heroPanel {
     grid-template-columns: 1fr;
   }
 
-  .sectionHeader {
-    display: block;
+  .section:not(.hero) {
+    padding: 18px;
   }
 
   .focusGrid,
