@@ -6,7 +6,7 @@ import { cases } from "@/content/cases";
 const caseItem = cases.find((item) => item.slug === "interfile-venda-assistida");
 
 export const metadata = {
-  title: "Venda assistida para Interfile | DesignLab de Rafaela Pinto"
+  title: "Venda assistida para Interfile | Rafaela Pinto"
 };
 
 export default function InterfileAssistedSalesCasePage() {

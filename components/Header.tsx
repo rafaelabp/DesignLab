@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="siteHeader">
       <Link className="brand" href="/">
-        DesignLab de Rafaela
+        Rafaela Pinto
       </Link>
       <nav className="nav" aria-label="Navegacao principal">
         <Link href="/">Home</Link>

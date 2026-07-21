@@ -5,6 +5,7 @@ export type CaseItem = {
   role: string;
   year: string;
   tags: string[];
+  image?: string;
 };
 
 export const cases: CaseItem[] = [
@@ -24,6 +25,7 @@ export const cases: CaseItem[] = [
       "Um sprint de design para prototipar um aplicativo de apoio a vendedores de chip, com foco em registro rapido, aceite de voz e validacao do atendimento.",
     role: "Product Design",
     year: "2021",
-    tags: ["Design Sprint", "Mobile", "Wireframes"]
+    tags: ["Design Sprint", "Mobile", "Wireframes"],
+    image: "/images/cases/interfile-venda-assistida/interfile-case.png"
   }
 ];

@@ -4,9 +4,9 @@ import { Header } from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DesignLab de Rafaela Pinto | Product Design",
+  title: "Rafaela Pinto | Product Design",
   description:
-    "Portfolio tecnico de Rafaela Pinto em Product Design, com estudos de caso sobre produto, interface e experiencia."
+    "Portfolio de Product Design de Rafaela Pinto, com estudos de caso sobre produto, interface e experiencia."
 };
 
 export default function RootLayout({
