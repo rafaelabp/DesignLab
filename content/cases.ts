@@ -16,5 +16,14 @@ export const cases: CaseItem[] = [
     role: "Product Design",
     year: "2026",
     tags: ["Canvas", "Sintaxe visual", "UX tecnica"]
+  },
+  {
+    title: "Venda assistida para Interfile",
+    slug: "interfile-venda-assistida",
+    summary:
+      "Um sprint de design para prototipar um aplicativo de apoio a vendedores de chip, com foco em registro rapido, aceite de voz e validacao do atendimento.",
+    role: "Product Design",
+    year: "2021",
+    tags: ["Design Sprint", "Mobile", "Wireframes"]
   }
 ];

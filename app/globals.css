@@ -269,6 +269,24 @@ h3 {
   color: var(--muted);
 }
 
+.caseVisual {
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-raised);
+}
+
+.caseVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.paragraphGap {
+  margin-top: 14px;
+}
+
 .caseCard {
   display: flex;
   min-height: 200px;
