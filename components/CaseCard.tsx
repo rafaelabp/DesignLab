@@ -8,8 +8,13 @@ type CaseCardProps = {
 export function CaseCard({ caseItem }: CaseCardProps) {
   return (
     <article className="caseCard">
+      <div className="caseCardVisual" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div>
-        <p className="caseCardMeta">{caseItem.year} · {caseItem.role}</p>
+        <p className="caseCardMeta">{caseItem.year} - {caseItem.role}</p>
         <h3>{caseItem.title}</h3>
         <p>{caseItem.summary}</p>
       </div>
