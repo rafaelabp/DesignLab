@@ -242,16 +242,14 @@ h3 {
 }
 
 .sectionLead {
-  display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
+  display: block;
+  max-width: 760px;
   margin-bottom: 22px;
 }
 
 .sectionLead .eyebrow {
-  margin: 0;
-  padding-top: 8px;
+  margin-bottom: 10px;
+  padding-top: 0;
 }
 
 .caseList {
