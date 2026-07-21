@@ -24,9 +24,9 @@ export default function Home() {
         </div>
 
         <div className="heroBoard" aria-label="Resumo do trabalho">
-          <div className="boardCard boardCardLarge">
+          <div className="boardCard">
             <span>Foco</span>
-            <strong>Produto, interface e sistemas de trabalho</strong>
+            <strong>Interfaces técnicas</strong>
           </div>
           <div className="boardCard">
             <span>Cases</span>
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
           <div className="boardCard">
             <span>Formato</span>
-            <strong>Processo + decisão</strong>
+            <strong>Processo e decisão</strong>
           </div>
         </div>
       </section>
@@ -48,30 +48,6 @@ export default function Home() {
           {cases.map((caseItem) => (
             <CaseCard caseItem={caseItem} key={caseItem.slug} />
           ))}
-        </div>
-      </section>
-
-      <section className="approachSection" aria-labelledby="approach-title">
-        <div className="sectionLead">
-          <p className="eyebrow">Como eu penso</p>
-          <h2 id="approach-title">Menos tela solta. Mais clareza sobre o sistema.</h2>
-        </div>
-        <div className="approachGrid">
-          <article>
-            <span>01</span>
-            <h3>Estruturar</h3>
-            <p>Entender contexto, dependências e onde a decisão trava.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Prototipar</h3>
-            <p>Transformar hipótese em fluxo navegável para aprender rápido.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Refinar</h3>
-            <p>Ajustar linguagem, estados e hierarquia até a interface ficar óbvia.</p>
-          </article>
         </div>
       </section>
     </>

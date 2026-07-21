@@ -99,7 +99,6 @@ p {
 
 .homeHero,
 .workSection,
-.approachSection,
 .section {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -194,31 +193,27 @@ h3 {
 
 .heroBoard {
   display: grid;
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   animation: enterUp 640ms 120ms ease both;
 }
 
 .boardCard {
-  min-height: 128px;
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgb(255 255 255 / 78%);
   box-shadow: 0 24px 70px rgb(15 23 42 / 12%);
-  padding: 22px;
+  padding: 20px;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .boardCard:hover {
   box-shadow: 0 30px 86px rgb(15 23 42 / 16%);
   transform: translateY(-4px);
-}
-
-.boardCardLarge {
-  min-height: 210px;
-  background:
-    linear-gradient(135deg, rgb(15 125 140 / 92%), rgb(109 91 208 / 84%)),
-    var(--panel-strong);
-  color: #ffffff;
 }
 
 .boardCard span,
@@ -234,14 +229,13 @@ h3 {
 }
 
 .boardCard strong {
-  max-width: 14rem;
-  margin-top: 12px;
-  font-size: clamp(1.4rem, 3vw, 2.4rem);
-  line-height: 1.08;
+  max-width: 16rem;
+  margin-top: 18px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.12;
 }
 
-.workSection,
-.approachSection {
+.workSection {
   padding: 34px 0;
 }
 
@@ -367,33 +361,6 @@ h3 {
 .textLink::after {
   content: " ->";
   color: var(--accent);
-}
-
-.approachGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.approachGrid article {
-  border-top: 2px solid var(--ink);
-  background: rgb(255 255 255 / 52%);
-  padding: 18px 0 0;
-}
-
-.approachGrid span {
-  color: var(--accent);
-  font-size: 0.84rem;
-  font-weight: 900;
-}
-
-.approachGrid h3 {
-  margin-top: 14px;
-}
-
-.approachGrid p {
-  margin-top: 8px;
-  color: var(--muted);
 }
 
 .section {
@@ -541,7 +508,6 @@ h3 {
   .homeHero,
   .sectionLead,
   .caseList,
-  .approachGrid,
   .focusGrid,
   .processGrid,
   .caseIntro {
@@ -551,10 +517,6 @@ h3 {
   .homeHero {
     min-height: auto;
     padding: 42px 0;
-  }
-
-  .boardCardLarge {
-    min-height: 150px;
   }
 }
 
@@ -568,7 +530,6 @@ h3 {
 
   .homeHero,
   .workSection,
-  .approachSection,
   .section {
     width: min(100% - 32px, 1180px);
   }
