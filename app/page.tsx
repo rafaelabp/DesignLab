@@ -135,15 +135,31 @@ export default function Home() {
         <div className="skillsGrid">
           <article className="skillCard">
             <h3>Product Design</h3>
-            <p>Discovery, UX/UI, SaaS B2B</p>
+            <p>Discovery, estratégia e UX/UI</p>
           </article>
           <article className="skillCard">
             <h3>UX Research</h3>
-            <p>Entrevistas, Maze, NPS</p>
+            <p>Entrevistas, testes e NPS</p>
+          </article>
+          <article className="skillCard">
+            <h3>Fluxos complexos</h3>
+            <p>User flows, regras e estados</p>
+          </article>
+          <article className="skillCard">
+            <h3>Prototipação</h3>
+            <p>Roughs, testes e validação</p>
           </article>
           <article className="skillCard">
             <h3>Design Systems</h3>
             <p>Atomic Design, componentes</p>
+          </article>
+          <article className="skillCard">
+            <h3>Handoff</h3>
+            <p>Documentação e QA de interface</p>
+          </article>
+          <article className="skillCard">
+            <h3>B2B SaaS</h3>
+            <p>API Management, produtos técnicos</p>
           </article>
           <article className="skillCard">
             <h3>AI Prototyping</h3>
