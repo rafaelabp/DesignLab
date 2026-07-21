@@ -1,8 +1,3 @@
 export function Footer() {
-  return (
-    <footer className="siteFooter">
-      <p>Rafaela Pinto</p>
-      <p>Product Design Portfolio</p>
-    </footer>
-  );
+  return <footer className="siteFooter">© 2026 Rafaela Pinto. Todos os direitos reservados.</footer>;
 }
