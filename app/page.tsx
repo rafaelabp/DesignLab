@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { CaseCard } from "@/components/CaseCard";
+import { ScrollTransitions } from "@/components/ScrollTransitions";
 import { cases } from "@/content/cases";
 
 export default function Home() {
   return (
     <>
+      <ScrollTransitions />
       <div className="glowLayer" aria-hidden="true">
         <span className="glowOne" />
         <span className="glowTwo" />
@@ -40,7 +42,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="statsBanner" aria-label="Resumo profissional">
+      <section className="statsBanner" aria-label="Resumo profissional" data-reveal>
         <div>
           <strong>10+ anos</strong>
           <span>De experiência</span>
@@ -59,9 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="parallaxBreak parallaxOne" aria-hidden="true" />
-
-      <section className="contentSection" id="experience">
+      <section className="contentSection" id="experience" data-reveal>
         <h2 className="sectionTitle">
           <span aria-hidden="true">▣</span>
           Experiência profissional
@@ -129,9 +129,7 @@ export default function Home() {
         </article>
       </section>
 
-      <div className="parallaxBreak parallaxTwo" aria-hidden="true" />
-
-      <section className="contentSection" id="skills">
+      <section className="contentSection" id="skills" data-reveal>
         <h2 className="sectionTitle">
           <span aria-hidden="true">✦</span>
           Competências & ferramentas
@@ -166,9 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="parallaxBreak parallaxThree" aria-hidden="true" />
-
-      <section className="contentSection" id="education">
+      <section className="contentSection" id="education" data-reveal>
         <h2 className="sectionTitle">
           <span aria-hidden="true">◈</span>
           Formação & idiomas
@@ -193,9 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="parallaxBreak parallaxFour" aria-hidden="true" />
-
-      <section className="contentSection" id="portfolio">
+      <section className="contentSection" id="portfolio" data-reveal>
         <div className="portfolioBox">
           <span className="portfolioIcon" aria-hidden="true">▦</span>
           <h2>Portfólio</h2>

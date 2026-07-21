@@ -335,58 +335,48 @@ h1 span {
   text-align: center;
 }
 
-.parallaxBreak {
-  position: relative;
-  height: 160px;
-  margin: -26px 0 54px;
-  overflow: hidden;
-  border-block: 1px solid rgb(255 255 255 / 6%);
-  background:
-    linear-gradient(90deg, rgb(255 255 255 / 6%) 1px, transparent 1px),
-    linear-gradient(180deg, rgb(255 255 255 / 5%) 1px, transparent 1px),
-    radial-gradient(circle at 18% 50%, rgb(99 102 241 / 36%), transparent 24rem),
-    radial-gradient(circle at 78% 20%, rgb(168 85 247 / 28%), transparent 22rem),
-    rgb(3 7 18 / 72%);
-  background-attachment: fixed;
-  background-size: 54px 54px, 54px 54px, auto, auto, auto;
-}
-
-.parallaxBreak::before {
-  content: "";
-  position: absolute;
-  inset: 30px 12%;
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgb(99 102 241 / 18%), rgb(236 72 153 / 12%));
-  filter: blur(0.2px);
-  transform: translateY(-10px);
-  animation: parallaxFloat 8s ease-in-out infinite alternate;
-}
-
-.parallaxBreak::after {
-  content: "";
-  position: absolute;
-  inset: auto 18% 42px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgb(165 180 252 / 70%), transparent);
-}
-
-.parallaxTwo {
-  background-position: 20px 0, 20px 0, center, right center, center;
-}
-
-.parallaxThree {
-  background-position: -18px 0, -18px 0, left center, center, center;
-}
-
-.parallaxFour {
-  height: 132px;
-  margin-bottom: 48px;
-}
-
 .statsBanner strong,
 .statsBanner span {
   display: block;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 42px, 0) scale(0.985);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].isVisible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-reveal] .resumeCard,
+[data-reveal] .skillGroup,
+[data-reveal] .caseCard {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 620ms ease, transform 620ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms ease, box-shadow 300ms ease;
+}
+
+[data-reveal].isVisible .resumeCard,
+[data-reveal].isVisible .skillGroup,
+[data-reveal].isVisible .caseCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal].isVisible .resumeCard:nth-of-type(2),
+[data-reveal].isVisible .skillGroup:nth-of-type(2),
+[data-reveal].isVisible .caseCard:nth-of-type(2) {
+  transition-delay: 90ms;
+}
+
+[data-reveal].isVisible .resumeCard:nth-of-type(3),
+[data-reveal].isVisible .caseCard:nth-of-type(3) {
+  transition-delay: 160ms;
 }
 
 .statsBanner strong {
@@ -833,16 +823,6 @@ h1 span {
   }
 }
 
-@keyframes parallaxFloat {
-  from {
-    transform: translate3d(-18px, -8px, 0);
-  }
-
-  to {
-    transform: translate3d(18px, 8px, 0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -853,8 +833,12 @@ h1 span {
     transition-duration: 0.01ms !important;
   }
 
-  .parallaxBreak {
-    background-attachment: scroll;
+  [data-reveal],
+  [data-reveal] .resumeCard,
+  [data-reveal] .skillGroup,
+  [data-reveal] .caseCard {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -893,16 +877,9 @@ h1 span {
   }
 
   .statsBanner,
-  .parallaxBreak,
   .resumeCard,
   .portfolioBox,
   .section {
     padding: 24px;
-  }
-
-  .parallaxBreak {
-    height: 96px;
-    margin: -18px 0 38px;
-    padding: 0;
   }
 }
