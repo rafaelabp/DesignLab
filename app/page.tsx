@@ -132,38 +132,32 @@ export default function Home() {
           <span aria-hidden="true">✦</span>
           Competências & ferramentas
         </h2>
-        <div className="skillsGrid">
-          <article className="skillCard">
-            <h3>Product Design</h3>
-            <p>Discovery, estratégia e UX/UI</p>
+        <div className="skillsStack">
+          <article className="skillGroup">
+            <h3>Competências</h3>
+            <div className="skillTags">
+              <span>UX Research</span>
+              <span>Discovery</span>
+              <span>UX/UI Design</span>
+              <span>Prototipação</span>
+              <span>Testes de Usabilidade</span>
+              <span>Arquitetura da Informação</span>
+              <span>Design Systems</span>
+              <span>Product Discovery</span>
+              <span>Facilitação</span>
+              <span>Métricas de UX</span>
+            </div>
           </article>
-          <article className="skillCard">
-            <h3>UX Research</h3>
-            <p>Entrevistas, testes e NPS</p>
-          </article>
-          <article className="skillCard">
-            <h3>Fluxos complexos</h3>
-            <p>User flows, regras e estados</p>
-          </article>
-          <article className="skillCard">
-            <h3>Prototipação</h3>
-            <p>Roughs, testes e validação</p>
-          </article>
-          <article className="skillCard">
-            <h3>Design Systems</h3>
-            <p>Atomic Design, componentes</p>
-          </article>
-          <article className="skillCard">
-            <h3>Handoff</h3>
-            <p>Documentação e QA de interface</p>
-          </article>
-          <article className="skillCard">
-            <h3>B2B SaaS</h3>
-            <p>API Management, produtos técnicos</p>
-          </article>
-          <article className="skillCard">
-            <h3>AI Prototyping</h3>
-            <p>Claude Code, Cursor, Codex</p>
+          <article className="skillGroup">
+            <h3>Ferramentas</h3>
+            <div className="skillTags">
+              <span>Figma</span>
+              <span>FigJam</span>
+              <span>Maze</span>
+              <span>Miro</span>
+              <span>Codex</span>
+              <span>Claude Code</span>
+            </div>
           </article>
         </div>
       </section>

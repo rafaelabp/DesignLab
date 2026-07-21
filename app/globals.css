@@ -371,7 +371,7 @@ h1 span {
 }
 
 .resumeCard,
-.skillCard,
+.skillGroup,
 .caseCard {
   position: relative;
   border: 1px solid rgb(255 255 255 / 8%);
@@ -383,7 +383,7 @@ h1 span {
 }
 
 .resumeCard:hover,
-.skillCard:hover,
+.skillGroup:hover,
 .caseCard:hover {
   border-color: rgb(99 102 241 / 50%);
   box-shadow: 0 0 30px rgb(99 102 241 / 25%);
@@ -447,32 +447,50 @@ h1 span {
   margin-bottom: 8px;
 }
 
-.skillsGrid,
+.skillsStack,
 .educationGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
+}
+
+.skillsStack {
+  grid-template-columns: 1fr;
 }
 
 .educationGrid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.skillCard {
-  padding: 20px;
+.skillGroup {
+  padding: 24px;
 }
 
-.skillCard h3 {
-  margin-bottom: 4px;
+.skillGroup h3 {
+  margin-bottom: 16px;
   color: var(--text);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
-.skillCard p,
 .resumeCard p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillTags span {
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 4%);
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 8px 12px;
 }
 
 .languageRow {
