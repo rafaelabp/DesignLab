@@ -7,7 +7,7 @@ type CaseCardProps = {
 
 export function CaseCard({ caseItem }: CaseCardProps) {
   return (
-    <article className="caseCard">
+    <Link className="caseCard" href={`/cases/${caseItem.slug}`}>
       <div className="caseThumb" aria-hidden="true">
         {caseItem.image ? <img src={caseItem.image} alt="" /> : <div className="casePattern" />}
       </div>
@@ -22,10 +22,8 @@ export function CaseCard({ caseItem }: CaseCardProps) {
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <Link className="textLink" href={`/cases/${caseItem.slug}`}>
-          Ler case
-        </Link>
+        <span className="textLink">Ler case</span>
       </div>
-    </article>
+    </Link>
   );
 }
