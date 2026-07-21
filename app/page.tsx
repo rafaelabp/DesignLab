@@ -4,16 +4,18 @@ import { Section } from "@/components/Section";
 import { cases } from "@/content/cases";
 
 export default function Home() {
+  const featuredCase = cases[0];
+
   return (
     <>
       <Section className="hero">
         <div className="heroPanel">
           <div className="heroContent">
             <p className="eyebrow">Portfolio tecnico de Product Design</p>
-            <h1>DesignLab de Rafaela Pinto transforma fluxos complexos em produto claro.</h1>
+            <h1>DesignLab de Rafaela Pinto organiza problemas de interface em decisoes mais claras.</h1>
             <p className="heroText">
-              Cases sobre interfaces tecnicas, prototipos, canvas, validacao e decisoes de
-              produto. Menos vitrine bonita, mais raciocinio de design aplicado.
+              Estudos de caso sobre produto, canvas, sintaxe visual e colaboracao entre design,
+              engenharia e estrategia.
             </p>
             <div className="heroActions" aria-label="Acoes principais">
               <Link className="button buttonPrimary" href="/cases">
@@ -25,26 +27,18 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="heroVisual" aria-label="Resumo visual do portfolio">
-            <div className="signalCard signalCardPrimary">
-              <span>Foco atual</span>
-              <strong>Produto + sistemas de interface</strong>
+          <aside className="heroAside" aria-label="Resumo profissional">
+            <div>
+              <span>Atuacao</span>
+              <strong>Product Design</strong>
             </div>
-            <div className="flowMap" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-              <span />
+            <div>
+              <span>Foco</span>
+              <strong>Interfaces tecnicas</strong>
             </div>
-            <div className="signalGrid">
-              <div>
-                <span>Cases</span>
-                <strong>{cases.length}</strong>
-              </div>
-              <div>
-                <span>Formato</span>
-                <strong>Estudo tecnico</strong>
-              </div>
+            <div>
+              <span>Primeiro case</span>
+              <strong>Canvas e sintaxe visual</strong>
             </div>
           </aside>
         </div>
@@ -67,12 +61,8 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Cases" title="Projetos para entender processo, decisao e resultado">
-        <div className="caseList">
-          {cases.map((caseItem) => (
-            <CaseCard caseItem={caseItem} key={caseItem.slug} />
-          ))}
-        </div>
+      <Section eyebrow="Case em destaque" title="Um estudo inicial para abrir a conversa">
+        <CaseCard caseItem={featuredCase} />
       </Section>
     </>
   );
