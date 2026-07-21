@@ -59,6 +59,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="parallaxBreak parallaxOne" aria-hidden="true" />
+
       <section className="contentSection" id="experience">
         <h2 className="sectionTitle">
           <span aria-hidden="true">▣</span>
@@ -127,6 +129,8 @@ export default function Home() {
         </article>
       </section>
 
+      <div className="parallaxBreak parallaxTwo" aria-hidden="true" />
+
       <section className="contentSection" id="skills">
         <h2 className="sectionTitle">
           <span aria-hidden="true">✦</span>
@@ -162,6 +166,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="parallaxBreak parallaxThree" aria-hidden="true" />
+
       <section className="contentSection" id="education">
         <h2 className="sectionTitle">
           <span aria-hidden="true">◈</span>
@@ -186,6 +192,8 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <div className="parallaxBreak parallaxFour" aria-hidden="true" />
 
       <section className="contentSection" id="portfolio">
         <div className="portfolioBox">
