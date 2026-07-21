@@ -243,13 +243,17 @@ h3 {
 
 .sectionLead {
   display: block;
-  max-width: 760px;
+  max-width: 100%;
   margin-bottom: 22px;
 }
 
 .sectionLead .eyebrow {
   margin-bottom: 10px;
   padding-top: 0;
+}
+
+.sectionLead h2 {
+  max-width: none;
 }
 
 .caseList {
