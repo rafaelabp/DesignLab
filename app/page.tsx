@@ -17,11 +17,8 @@ export default function Home() {
           Aberta a trabalho remoto e relocação para São Paulo
         </div>
 
-        <h1>
-          Senior Product Designer
-          <br />
-          <span>UX / UI Designer</span>
-        </h1>
+        <h1>Rafaela Pinto</h1>
+        <p className="heroRole">Senior Product Designer · UX/UI Designer</p>
 
         <p className="heroDesc">
           Product Designer com mais de 10 anos de experiência em UX, UI e produtos digitais.
@@ -29,7 +26,7 @@ export default function Home() {
           IA no processo de ideação e prototipação funcional.
         </p>
 
-        <div className="contactLinks" aria-label="Contato e localizacao">
+        <div className="contactLinks" aria-label="Contato e localização">
           <span>Aracaju, SE</span>
           <a href="tel:+5579999439386">(79) 99943-9386</a>
           <a href="mailto:rafinhabp@gmail.com">rafinhabp@gmail.com</a>
@@ -57,7 +54,7 @@ export default function Home() {
           <span>Design systems</span>
         </div>
         <div>
-          <strong>AI Workflows</strong>
+          <strong>IA aplicada</strong>
           <span>Prototipação ágil</span>
         </div>
       </section>
@@ -146,9 +143,9 @@ export default function Home() {
           </article>
           <article className="skillCard">
             <h3>Design Systems</h3>
-            <p>Atomic Design, QA</p>
+            <p>Atomic Design, componentes</p>
           </article>
-          <article className="skillCard aiHighlight">
+          <article className="skillCard">
             <h3>AI Prototyping</h3>
             <p>Claude Code, Cursor, Codex</p>
           </article>

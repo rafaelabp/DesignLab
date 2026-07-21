@@ -172,19 +172,47 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerContact,
+.headerDownload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
 .headerContact {
   border-radius: 8px;
   background: var(--text);
   box-shadow: 0 0 20px rgb(255 255 255 / 20%);
   color: var(--bg);
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 8px 18px;
-  transition: transform 200ms ease, background 200ms ease;
+}
+
+.headerDownload {
+  border: 1px solid rgb(255 255 255 / 16%);
+  background: rgb(255 255 255 / 5%);
+  color: var(--text-soft);
 }
 
 .headerContact:hover {
   background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.headerDownload:hover {
+  border-color: rgb(99 102 241 / 45%);
+  background: rgb(99 102 241 / 16%);
+  color: var(--text);
   transform: translateY(-1px);
 }
 
@@ -242,6 +270,17 @@ h1 span {
   background: linear-gradient(135deg, var(--indigo-soft), var(--purple-soft), var(--pink-soft));
   background-clip: text;
   color: transparent;
+}
+
+.heroRole {
+  max-width: max-content;
+  margin: -10px 0 24px;
+  background: linear-gradient(135deg, var(--indigo-soft), var(--purple-soft), var(--pink-soft));
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1.55rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .heroDesc {
@@ -303,9 +342,10 @@ h1 span {
 
 .statsBanner strong {
   color: var(--text);
-  font-size: 2rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
   font-weight: 800;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .statsBanner span {
@@ -433,20 +473,6 @@ h1 span {
 .resumeCard p {
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.aiHighlight {
-  border-color: var(--line-strong);
-  background: rgb(99 102 241 / 15%);
-  box-shadow: 0 0 20px rgb(99 102 241 / 25%);
-}
-
-.aiHighlight h3 {
-  color: var(--indigo-light);
-}
-
-.aiHighlight p {
-  color: var(--purple-soft);
 }
 
 .languageRow {
@@ -777,7 +803,7 @@ h1 span {
     padding: 0 18px;
   }
 
-  .headerContact {
+  .headerActions {
     display: none;
   }
 

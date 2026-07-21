@@ -9,16 +9,21 @@ export function Header() {
         </Link>
         <nav className="nav" aria-label="Navegacao principal">
           <Link href="/#about">Sobre</Link>
-          <Link href="/#experience">Experiencia</Link>
-          <Link href="/#skills">Competencias</Link>
-          <Link href="/#education">Formacao</Link>
+          <Link href="/#experience">Experiência</Link>
+          <Link href="/#skills">Competências</Link>
+          <Link href="/#education">Formação</Link>
           <Link className="portfolioMenuItem" href="/#portfolio">
-            Portfolio <span>Cases</span>
+            Portfólio <span>Cases</span>
           </Link>
         </nav>
-        <a className="headerContact" href="mailto:rafinhabp@gmail.com">
-          Contato
-        </a>
+        <div className="headerActions">
+          <a className="headerDownload" href="/rafaela-pinto-curriculo.pdf" download>
+            Baixar em PDF
+          </a>
+          <a className="headerContact" href="mailto:rafinhabp@gmail.com">
+            Contato
+          </a>
+        </div>
       </div>
     </header>
   );
