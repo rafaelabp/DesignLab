@@ -269,9 +269,16 @@ h3 {
   color: var(--muted);
 }
 
+.caseIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: 20px;
+  align-items: start;
+}
+
 .caseVisual {
   overflow: hidden;
-  margin-bottom: 18px;
+  margin: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface-raised);
@@ -280,7 +287,16 @@ h3 {
 .caseVisual img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.caseVisual figcaption {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  padding: 10px 12px;
 }
 
 .paragraphGap {
@@ -375,6 +391,10 @@ h3 {
   .focusGrid,
   .processGrid,
   .caseList {
+    grid-template-columns: 1fr;
+  }
+
+  .caseIntro {
     grid-template-columns: 1fr;
   }
 }

@@ -31,17 +31,20 @@ export default function InterfileAssistedSalesCasePage() {
       </Section>
 
       <Section title="Visao geral">
-        <div className="caseVisual">
-          <img
-            src="/images/cases/interfile-venda-assistida/interfile-case.png"
-            alt="Imagem do case Interfile com telas mobile e etapas de pesquisa, wireframes e consideracoes."
-          />
+        <div className="caseIntro">
+          <p>
+            A Interfile queria apresentar para a Vivo uma proposta de aplicativo para apoiar
+            vendedores de chip no registro de vendas. A ideia era reduzir atrito operacional e
+            permitir que parte do fluxo acontecesse no celular, em poucos passos.
+          </p>
+          <figure className="caseVisual">
+            <img
+              src="/images/cases/interfile-venda-assistida/interfile-case.png"
+              alt="Referencia visual do case Interfile com telas mobile e etapas de pesquisa, wireframes e consideracoes."
+            />
+            <figcaption>Referencia visual extraida do material original do case.</figcaption>
+          </figure>
         </div>
-        <p>
-          A Interfile queria apresentar para a Vivo uma proposta de aplicativo para apoiar
-          vendedores de chip no registro de vendas. A ideia era reduzir atrito operacional e
-          permitir que parte do fluxo acontecesse no celular, em poucos passos.
-        </p>
       </Section>
 
       <Section title="Problema">
