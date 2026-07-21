@@ -108,7 +108,7 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.7fr);
   gap: clamp(28px, 6vw, 72px);
-  align-items: end;
+  align-items: start;
   min-height: min(720px, calc(100vh - 76px));
   padding: 48px 0 56px;
 }
@@ -195,6 +195,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  align-self: start;
+  padding-top: 8px;
   animation: enterUp 640ms 120ms ease both;
 }
 
