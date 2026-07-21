@@ -9,6 +9,7 @@ export function Header() {
       <nav className="nav" aria-label="Navegacao principal">
         <Link href="/">Home</Link>
         <Link href="/cases">Cases</Link>
+        <Link href="/curriculo">Currículo</Link>
       </nav>
     </header>
   );

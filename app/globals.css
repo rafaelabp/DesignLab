@@ -489,6 +489,266 @@ h3 {
   margin-top: 10px;
 }
 
+.resumePage {
+  overflow: hidden;
+}
+
+.resumeHero,
+.resumeSection {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  position: relative;
+}
+
+.resumeHero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86px 0;
+}
+
+.resumeAurora {
+  position: absolute;
+  inset: -20vh -16vw;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.resumeAurora::before,
+.resumeAurora::after {
+  content: "";
+  position: absolute;
+  width: 58vw;
+  height: 58vw;
+  border-radius: 999px;
+  filter: blur(100px);
+  opacity: 0.34;
+  will-change: transform;
+}
+
+.resumeAurora::before {
+  top: -14vw;
+  left: -10vw;
+  background: radial-gradient(circle, var(--wine), transparent 68%);
+  transform: translateY(calc(var(--resume-scroll, 0) * 0.06px));
+}
+
+.resumeAurora::after {
+  right: -10vw;
+  bottom: -18vw;
+  background: radial-gradient(circle, var(--violet), transparent 68%);
+  transform: translateY(calc(var(--resume-scroll, 0) * -0.08px));
+}
+
+.resumeHero h1 {
+  margin: 10px 0 16px;
+  font-size: clamp(3rem, 8vw, 6.6rem);
+}
+
+.resumeHero h1 em {
+  color: transparent;
+  font-style: italic;
+  background: linear-gradient(90deg, var(--accent-strong), var(--soft));
+  background-clip: text;
+}
+
+.resumeHero > p {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+}
+
+.resumeMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 34px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.resumeMeta span,
+.resumeMeta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resumeMeta span::before,
+.resumeMeta a::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--violet);
+}
+
+.resumeMeta a:hover {
+  color: var(--accent-strong);
+}
+
+.resumeSection {
+  padding: 72px 0;
+}
+
+.resumeSectionHead {
+  max-width: 64ch;
+  margin-bottom: 38px;
+}
+
+.resumeSectionHead h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.resumeSectionHead p {
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.gradientRule {
+  width: 72px;
+  height: 2px;
+  margin: 0 0 28px;
+  border: 0;
+  background: linear-gradient(90deg, var(--wine), var(--violet), var(--blue));
+}
+
+.resumeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resumeTags span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--muted);
+  padding: 7px 12px;
+  font-size: 0.82rem;
+}
+
+.timeline {
+  max-width: 900px;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 34px;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.jobDate,
+.jobPlace {
+  display: block;
+}
+
+.jobDate {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.jobPlace,
+.jobRole {
+  color: var(--soft);
+  font-size: 0.9rem;
+}
+
+.job h3 {
+  margin-bottom: 4px;
+  font-size: 1.35rem;
+}
+
+.job ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.job li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 1px;
+  background: var(--violet);
+}
+
+.previousRoles {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.previousRoles p {
+  max-width: 760px;
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.resumeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 900px;
+}
+
+.resumeCard {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  padding: 26px;
+}
+
+.resumeCard .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.resumeCard h3 {
+  margin-bottom: 8px;
+}
+
+.resumeCard p,
+.languageRow {
+  color: var(--muted);
+}
+
+.languageRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.languageRow strong {
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes enterUp {
   from {
     opacity: 0;
@@ -510,6 +770,11 @@ h3 {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 880px) {
@@ -518,13 +783,20 @@ h3 {
   .caseList,
   .focusGrid,
   .processGrid,
-  .caseIntro {
+  .caseIntro,
+  .job,
+  .resumeGrid {
     grid-template-columns: 1fr;
   }
 
   .homeHero {
     min-height: auto;
     padding: 42px 0;
+  }
+
+  .resumeHero {
+    min-height: auto;
+    padding: 64px 0;
   }
 }
 
@@ -538,7 +810,9 @@ h3 {
 
   .homeHero,
   .workSection,
-  .section {
+  .section,
+  .resumeHero,
+  .resumeSection {
     width: min(100% - 32px, 1180px);
   }
 
